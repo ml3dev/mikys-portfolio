@@ -396,25 +396,17 @@ nav a:hover { color: var(--tx); background: rgba(0,0,0,0.03) }
   transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
 }
 .game:hover .game__thumb img { transform: scale(1.05) }
-.game__thumb::after {
-  content: ""; position: absolute; inset: auto 0 0 0; height: 45%;
-  background: linear-gradient(180deg, transparent, rgba(30,26,42,0.35));
-  pointer-events: none;
+.game__foot {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px 16px; flex-wrap: wrap;
 }
-.game__visits {
-  position: absolute; right: 16px; bottom: 16px; z-index: 1;
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 8px 14px 8px 12px;
-  background: rgba(30,26,42,0.72);
-  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.14);
-  border-radius: 100px;
-  color: rgba(255,255,255,0.85);
-  font-size: 0.78rem; font-weight: 600;
+.game__stat { display: flex; align-items: baseline; gap: 7px }
+.game__stat b { font-size: 1.4rem; font-weight: 900; letter-spacing: -0.03em; color: var(--tx); line-height: 1 }
+.game__stat span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.66rem; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--tx3);
 }
-.game__visits b { color: #fff; font-size: 1rem; font-weight: 900; letter-spacing: -0.01em }
-.game__visits i { font-size: 0.62rem; color: var(--coral) }
-.game:nth-child(2) .game__visits i { color: var(--rose) }
 .game__body { padding: 0 28px 28px; display: flex; flex-direction: column; flex: 1 }
 .game__top {
   display: flex; align-items: flex-start; gap: 16px;
@@ -905,7 +897,6 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
   .game__icon{width:64px;height:64px;border-radius:16px;margin-top:-32px}
   .game__top > div{padding-top:10px}
   .game__name{font-size:1.18rem}
-  .game__visits{right:12px;bottom:12px}
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
@@ -978,7 +969,6 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
       <a href="https://www.roblox.com/games/82400187661950/Carry-a-Bunny" target="_blank" rel="noopener noreferrer" class="game rv">
         <div class="game__thumb">
           <img src="assets/games/carry-a-bunny.webp" alt="Carry A Bunny game thumbnail" width="768" height="432" loading="lazy">
-          <span class="game__visits"><i class="fa-solid fa-play"></i><b>4.4M+</b> visits</span>
         </div>
         <div class="game__body">
           <div class="game__top">
@@ -989,13 +979,15 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
             </div>
           </div>
           <p class="game__desc">Built and integrated the majority of the game's scripting, including the 2-player Human/Bunny system, carrying, course progression, checkpoints, obstacles, saving, cosmetics, rewards, monetization, teleporting, and UI-connected gameplay systems. I also maintained and expanded existing systems as the game received new maps and updates.</p>
-          <span class="game__link">Play on Roblox <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          <div class="game__foot">
+            <span class="game__link">Play on Roblox <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            <span class="game__stat"><b>4.4M+</b><span>visits</span></span>
+          </div>
         </div>
       </a>
       <a href="https://www.roblox.com/games/97223477435566/Pass-The-Squishy" target="_blank" rel="noopener noreferrer" class="game rv">
         <div class="game__thumb">
           <img src="assets/games/pass-the-squishy.webp" alt="Pass The Squishy game thumbnail" width="767" height="432" loading="lazy">
-          <span class="game__visits"><i class="fa-solid fa-play"></i><b>527K+</b> visits</span>
         </div>
         <div class="game__body">
           <div class="game__top">
@@ -1006,7 +998,10 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
             </div>
           </div>
           <p class="game__desc">Built the game's core scripting architecture and nearly all major gameplay systems from scratch, including round management, squishy passing, eliminations, final-duel combat, bots, maps, voting, cosmetics, currency, saving, leaderboards, monetization, rewards, console/mobile support, and UI-connected systems. I also handled extensive gameplay polish, optimization, testing, and post-launch updates.</p>
-          <span class="game__link">Play on Roblox <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          <div class="game__foot">
+            <span class="game__link">Play on Roblox <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+            <span class="game__stat"><b>527K+</b><span>visits</span></span>
+          </div>
         </div>
       </a>
     </div>
