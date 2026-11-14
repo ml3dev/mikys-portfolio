@@ -202,6 +202,7 @@ nav a:hover { color: var(--tx); background: rgba(0,0,0,0.03) }
 .hero__sub {
   color: var(--tx2); font-size: 1.15rem;
   line-height: 1.7; margin-bottom: 38px; max-width: 530px;
+  text-wrap: balance;
   font-weight: 400;
 }
 .hero__btns { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center }
@@ -702,6 +703,7 @@ nav a:hover { color: var(--tx); background: rgba(0,0,0,0.03) }
 .cta__p {
   color: var(--tx2); font-size: 0.95rem; line-height: 1.8;
   max-width: 460px; margin: 0 auto 36px;
+  text-wrap: balance;
 }
 .ct-links {
   display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;
@@ -742,7 +744,6 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
 }
 .ct-card--dc::before { background: linear-gradient(135deg, #5865f2, var(--lavender)) }
 .ct-card--rb::before { background: linear-gradient(135deg, var(--coral), var(--rose)) }
-.ct-card--em::before { background: linear-gradient(135deg, #ea4335, #4285f4) }
 .ct-card--gh::before { background: linear-gradient(135deg, #1e1a2a, #66607a) }
 .ct-card:hover::before { opacity: 0.5 }
 .ct-card:hover { transform: translateY(-4px); box-shadow: var(--shadow) }
@@ -754,7 +755,6 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
 .ct-card:hover .ct-card__ico { transform: scale(1.1) rotate(-3deg) }
 .ct-card--dc .ct-card__ico { background: rgba(88,101,242,0.08); color: #5865f2; border: 1px solid rgba(88,101,242,0.1) }
 .ct-card--rb .ct-card__ico { background: rgba(30,26,42,0.03); color: var(--tx2); border: 1px solid var(--gb) }
-.ct-card--em .ct-card__ico { background: #fff; border: 1px solid var(--gb); padding: 9px }
 .ct-card--gh .ct-card__ico { background: rgba(30,26,42,0.06); color: var(--tx); border: 1px solid var(--gb) }
 .ct-card__info { display: flex; flex-direction: column }
 .ct-card__plat {
@@ -889,7 +889,7 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
     <div class="hero__badge"><b></b> Open for commissions</div>
     <h1 class="hero__h1"><span class="gr">Miky</span></h1>
     <p class="hero__label">Roblox Scripter</p>
-    <p class="hero__sub">I script full Roblox games and the systems inside them.</p>
+    <p class="hero__sub">Fast, clean scripting for anything from a single system to a full game.</p>
     <div class="hero__btns">
       <a href="#contact" class="btn btn--main"><span><i class="fa-solid fa-paper-plane"></i> Hire Me</span></a>
       <a href="#work" class="btn btn--sec">View My Work <i class="fa-solid fa-arrow-down"></i></a>
@@ -1303,7 +1303,7 @@ return Cooldown
         <div class="comm-info__ico"><i class="fa-solid fa-clock"></i></div>
         <div>
           <div class="comm-info__label">Availability</div>
-          <p class="comm-info__text">EST based. I reply within hours on Discord, slower on email.</p>
+          <p class="comm-info__text">EST based. I usually reply within hours on Discord.</p>
         </div>
       </div>
     </div>
@@ -1332,19 +1332,6 @@ return Cooldown
         <a href="https://github.com/ml3dev" class="ct-card ct-card--gh" target="_blank" rel="noopener noreferrer">
           <div class="ct-card__ico"><i class="fa-brands fa-github"></i></div>
           <div class="ct-card__info"><span class="ct-card__plat">GitHub</span><span class="ct-card__user">ml3dev</span></div>
-          <i class="fa-solid fa-arrow-right ct-card__arr"></i>
-        </a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ml3devv@gmail.com" class="ct-card ct-card--em" target="_blank" rel="noopener noreferrer">
-          <div class="ct-card__ico">
-            <svg width="22" height="17" viewBox="0 0 24 18" xmlns="http://www.w3.org/2000/svg">
-              <path d="M1.636 18h3.819V8.73L0 4.637v11.727C0 17.268.732 18 1.636 18z" fill="#4285F4"/>
-              <path d="M18.545 18h3.819A1.636 1.636 0 0 0 24 16.364V4.637l-5.455 4.092z" fill="#34A853"/>
-              <path d="M18.545 1.636V8.73L24 4.637V2.454c0-2.024-2.31-3.178-3.927-1.963z" fill="#FBBC04"/>
-              <path d="M5.455 8.73V1.636L12 6.545l6.545-4.909V8.73L12 13.636z" fill="#EA4335"/>
-              <path d="M0 2.454v2.182L5.455 8.73V1.636L3.927.491C2.309-.723 0 .43 0 2.454z" fill="#C5221F"/>
-            </svg>
-          </div>
-          <div class="ct-card__info"><span class="ct-card__plat">Email</span><span class="ct-card__user">ml3dev</span></div>
           <i class="fa-solid fa-arrow-right ct-card__arr"></i>
         </a>
       </div>
