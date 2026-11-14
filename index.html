@@ -4,15 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Miky - Roblox Scripter for Hire</title>
-<meta name="description" content="Miky is a Roblox scripter for full games and individual systems. Main scripter on games with 4.9M+ visits. Open for commissions.">
+<meta name="description" content="Miky is a Roblox scripter for full games and individual systems. Clean, modular Luau. Open for commissions.">
 <meta name="theme-color" content="#ef7f5a">
 <meta property="og:title" content="Miky - Roblox Scripter for Hire">
-<meta property="og:description" content="Roblox scripter for full games and individual systems. Main scripter on games with 4.9M+ visits. Clean, modular Luau. Open for commissions.">
+<meta property="og:description" content="Roblox scripter for full games and individual systems. Clean, modular Luau. Open for commissions.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ml3dev.github.io/mikys-portfolio/">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Miky - Roblox Scripter for Hire">
-<meta name="twitter:description" content="Roblox scripter for full games and systems. 4.9M+ visits on games I've scripted. Open for commissions.">
+<meta name="twitter:description" content="Roblox scripter for full games and systems. Open for commissions.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -199,7 +199,6 @@ nav a:hover { color: var(--tx); background: rgba(0,0,0,0.03) }
   color: var(--tx3); letter-spacing: 0.08em;
   text-transform: uppercase; margin-bottom: 20px;
 }
-.hero__sub strong { color: var(--tx); font-weight: 800 }
 .hero__sub {
   color: var(--tx2); font-size: 1.15rem;
   line-height: 1.7; margin-bottom: 38px; max-width: 530px;
@@ -370,9 +369,6 @@ nav a:hover { color: var(--tx); background: rgba(0,0,0,0.03) }
 .sys-head a:hover { color: var(--rose) }
 
 /* ── GAMES ── */
-#games .sect-h { margin-bottom: 10px }
-.games-head { color: var(--tx2); font-size: 0.95rem; margin-bottom: 32px }
-.games-head strong { color: var(--tx); font-weight: 800 }
 .games-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px }
 .game {
   display: flex; flex-direction: column;
@@ -522,14 +518,7 @@ nav a:hover { color: var(--tx); background: rgba(0,0,0,0.03) }
 
 /* ── COMMISSIONS ── */
 .comm-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px }
-.tier.tier--big {
-  background: #1e1f2b; border-color: rgba(255,255,255,0.06);
-  box-shadow: var(--shadow-lg);
-}
-.tier.tier--big:hover { border-color: rgba(255,255,255,0.14); box-shadow: var(--shadow-lg) }
-.tier.tier--big .tier__name { color: #fff }
-.tier.tier--big .tier__ico { background: rgba(95,173,132,0.16) }
-.tier.tier--big .tier__rbx, .tier.tier--big .tier__desc, .tier.tier--big .tier__list li { color: #b9b5c9 }
+
 .tier {
   background: var(--card); border: 1px solid var(--gb);
   border-radius: var(--r); padding: 32px 26px;
@@ -900,7 +889,7 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
     <div class="hero__badge"><b></b> Open for commissions</div>
     <h1 class="hero__h1"><span class="gr">Miky</span></h1>
     <p class="hero__label">Roblox Scripter</p>
-    <p class="hero__sub">I script full Roblox games and the systems inside them. Main scripter on games with <strong>4.9M+ visits</strong>.</p>
+    <p class="hero__sub">I script full Roblox games and the systems inside them.</p>
     <div class="hero__btns">
       <a href="#contact" class="btn btn--main"><span><i class="fa-solid fa-paper-plane"></i> Hire Me</span></a>
       <a href="#work" class="btn btn--sec">View My Work <i class="fa-solid fa-arrow-down"></i></a>
@@ -912,7 +901,6 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
 <section class="sect" id="games">
   <div class="w">
     <h2 class="sect-h rv">Games I've Worked On</h2>
-    <p class="games-head rv">Live on Roblox with <strong>4.9M+ visits</strong> combined</p>
     <div class="games-grid stag">
       <a href="https://www.roblox.com/games/82400187661950/Carry-a-Bunny" target="_blank" rel="noopener noreferrer" class="game rv">
         <div class="game__thumb">
@@ -929,7 +917,7 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
           <p class="game__desc">Built and integrated the majority of the game's scripting, including the 2-player Human/Bunny system, carrying, course progression, checkpoints, obstacles, saving, cosmetics, rewards, monetization, teleporting, and UI-connected gameplay systems. I also maintained and expanded existing systems as the game received new maps and updates.</p>
           <div class="game__foot">
             <span class="game__link">Play on Roblox <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            <span class="game__stat"><b>4.4M+</b><span>visits</span></span>
+            <span class="game__stat"><b data-universe="9845476289">4.4M+</b><span>visits</span></span>
           </div>
         </div>
       </a>
@@ -948,7 +936,7 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
           <p class="game__desc">Built the game's core scripting architecture and nearly all major gameplay systems from scratch, including round management, squishy passing, eliminations, final-duel combat, bots, maps, voting, cosmetics, currency, saving, leaderboards, monetization, rewards, console/mobile support, and UI-connected systems. I also handled extensive gameplay polish, optimization, testing, and post-launch updates.</p>
           <div class="game__foot">
             <span class="game__link">Play on Roblox <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
-            <span class="game__stat"><b>527K+</b><span>visits</span></span>
+            <span class="game__stat"><b data-universe="10765089018">527K+</b><span>visits</span></span>
           </div>
         </div>
       </a>
@@ -964,7 +952,7 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
       <div class="rv">
         <div class="about-p">
           <p>I'm <strong>Miky</strong>, a Roblox scripter building clean, reliable games and systems.</p>
-<p><strong>3+ years of experience</strong>, and main scripter on <strong>two live games with 4.9M+ combined visits</strong>.</p>
+<p><strong>3+ years of experience</strong> scripting on Roblox, from small commissions to full live games.</p>
 <p>I take on anything from <strong>a single system to a whole game</strong>: core gameplay, combat, rounds, saving, monetization, UI, bots, and mobile and console support.</p>
 <p>I write <strong>organized, modular code</strong>. Everything is split into proper modules, structured with configs, and named clearly so anything is easy to find and change later.</p>
         </div>
@@ -1219,30 +1207,30 @@ return Cooldown
         <div class="tier__ico"><i class="fa-solid fa-cube"></i></div>
         <div class="tier__name">Single System</div>
         <div class="tier__scope">Small scope</div>
-        <div class="tier__price">From $20 USD</div>
-        <span class="tier__rbx">or ~R$7,520 in Robux</span>
+        <div class="tier__price">From $50 USD</div>
+        <span class="tier__rbx">or ~R$18,800 in Robux</span>
         <p class="tier__desc">One standalone system or script. Combat, shop, NPC, data handler, or custom tool.</p>
         <ul class="tier__list">
           <li>One focused system</li>
           <li>Revisions included</li>
-          <li>Delivers in 3-7 days</li>
+          <li>Delivers in 1-3 days</li>
         </ul>
       </div>
       <div class="tier rv">
         <div class="tier__ico"><i class="fa-solid fa-cubes"></i></div>
         <div class="tier__name">Multi-System</div>
         <div class="tier__scope">Medium scope</div>
-        <div class="tier__price">From $100 USD total</div>
-        <span class="tier__rbx">or ~R$37,600 in Robux · split across tasks</span>
+        <div class="tier__price">From $200 USD total</div>
+        <span class="tier__rbx">or ~R$75,200 in Robux · split across tasks</span>
         <p class="tier__desc">Multiple systems that work together. Shop + inventory + data saving, combat + UI, etc.</p>
         <ul class="tier__list">
           <li>2-4 connected systems</li>
           <li>Server and client side</li>
           <li>Fully tested</li>
-          <li>Delivers in 1-3 weeks</li>
+          <li>Usually delivers within a week</li>
         </ul>
       </div>
-      <div class="tier tier--big rv">
+      <div class="tier rv">
         <div class="tier__ico"><i class="fa-solid fa-layer-group"></i></div>
         <div class="tier__name">Larger / Custom Projects</div>
         <div class="tier__scope">Large scope</div>
@@ -1422,6 +1410,26 @@ document.querySelectorAll('a[href="#work"]').forEach(a => {
     window.scrollTo({ top: target, behavior: 'smooth' });
   });
 });
+
+// Live visit counts. Roblox's API blocks browser requests (no CORS), so this goes
+// through the RoProxy mirror. Numbers are floored so the "+" stays true, and the
+// static values in the HTML stay put if the request fails.
+(async () => {
+  const els = document.querySelectorAll('[data-universe]');
+  if (!els.length) return;
+  const ids = [...new Set([...els].map(e => e.dataset.universe))].join(',');
+  const fmt = n => n >= 1e6 ? `${Math.floor(n / 1e5) / 10}M+`
+    : n >= 1e3 ? `${Math.floor(n / 1e3)}K+` : `${n}`;
+  try {
+    const r = await fetch(`https://games.roproxy.com/v1/games?universeIds=${ids}`);
+    if (!r.ok) return;
+    const { data } = await r.json();
+    for (const g of data || []) {
+      if (typeof g.visits !== 'number') continue;
+      document.querySelectorAll(`[data-universe="${g.id}"]`).forEach(e => e.textContent = fmt(g.visits));
+    }
+  } catch {}
+})();
 
 const io = new IntersectionObserver(e => {
   e.forEach(x => { if (x.isIntersecting) { x.target.classList.add('show'); io.unobserve(x.target) } });
