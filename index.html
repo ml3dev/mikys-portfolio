@@ -368,6 +368,93 @@ nav a:hover { color: var(--tx); background: rgba(0,0,0,0.03) }
 }
 .sys-head a:hover { color: var(--rose) }
 
+/* ── GAMES ── */
+#games .sect-h { margin-bottom: 10px }
+.games-head { color: var(--tx2); font-size: 0.95rem; margin-bottom: 32px }
+.games-head strong { color: var(--tx); font-weight: 800 }
+.games-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px }
+.game {
+  display: flex; flex-direction: column;
+  background: var(--card); border: 1px solid var(--gb);
+  border-radius: 24px; overflow: hidden;
+  text-decoration: none; color: inherit;
+  box-shadow: var(--shadow);
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.22,1,0.36,1);
+}
+.game:hover {
+  transform: translateY(-6px);
+  border-color: var(--gb-h);
+  box-shadow: var(--shadow-lg);
+}
+.game__thumb {
+  position: relative; aspect-ratio: 16/9; overflow: hidden;
+  background: var(--bg-warm);
+}
+.game__thumb img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
+}
+.game:hover .game__thumb img { transform: scale(1.05) }
+.game__thumb::after {
+  content: ""; position: absolute; inset: auto 0 0 0; height: 45%;
+  background: linear-gradient(180deg, transparent, rgba(30,26,42,0.35));
+  pointer-events: none;
+}
+.game__visits {
+  position: absolute; right: 16px; bottom: 16px; z-index: 1;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px 8px 12px;
+  background: rgba(30,26,42,0.72);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 100px;
+  color: rgba(255,255,255,0.85);
+  font-size: 0.78rem; font-weight: 600;
+}
+.game__visits b { color: #fff; font-size: 1rem; font-weight: 900; letter-spacing: -0.01em }
+.game__visits i { font-size: 0.62rem; color: var(--coral) }
+.game:nth-child(2) .game__visits i { color: var(--rose) }
+.game__body { padding: 0 28px 28px; display: flex; flex-direction: column; flex: 1 }
+.game__top {
+  display: flex; align-items: flex-start; gap: 16px;
+  margin-bottom: 16px; position: relative; z-index: 1;
+}
+.game__top > div { padding-top: 14px; min-width: 0 }
+.game__icon {
+  width: 72px; height: 72px; border-radius: 18px; flex-shrink: 0;
+  margin-top: -36px;
+  border: 4px solid var(--card);
+  box-shadow: 0 6px 20px rgba(30,26,42,0.16);
+  background: var(--bg-warm); display: block;
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1);
+}
+.game:hover .game__icon { transform: rotate(-4deg) scale(1.05) }
+.game__name {
+  font-size: 1.3rem; font-weight: 900; letter-spacing: -0.02em;
+  line-height: 1.15; margin-bottom: 6px;
+}
+.game__role {
+  display: inline-block;
+  padding: 3px 10px; border-radius: 7px;
+  font-size: 0.72rem; font-weight: 700;
+  background: var(--coral-soft); color: #c95f3d;
+}
+.game:nth-child(2) .game__role { background: var(--rose-soft); color: #b84f71 }
+.game__desc { color: var(--tx2); font-size: 0.86rem; line-height: 1.75; margin-bottom: 20px; flex: 1 }
+.game__link {
+  align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px; border-radius: 11px;
+  background: var(--tx); color: #fff;
+  font-size: 0.8rem; font-weight: 700;
+  transition: all 0.25s cubic-bezier(0.22,1,0.36,1);
+}
+.game__link i { font-size: 0.66rem; transition: transform 0.25s }
+.game:hover .game__link { background: var(--coral) }
+.game:nth-child(2):hover .game__link { background: var(--rose) }
+.game:hover .game__link i { transform: translate(2px,-2px) }
+
 /* ── SCOPE ── */
 .scope-intro { text-align: center; max-width: 600px; margin: 0 auto 48px }
 .scope-intro h2 { margin-bottom: 16px }
@@ -812,6 +899,14 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
 @media(max-width:540px){
   .code-bodies pre { font-size: 0.88rem; padding: 18px 18px 22px }
 }
+@media(max-width:760px){
+  .games-grid{grid-template-columns:1fr;gap:16px}
+  .game__body{padding:0 20px 22px}
+  .game__icon{width:64px;height:64px;border-radius:16px;margin-top:-32px}
+  .game__top > div{padding-top:10px}
+  .game__name{font-size:1.18rem}
+  .game__visits{right:12px;bottom:12px}
+}
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -828,11 +923,14 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
   .sk:hover, .sys:hover, .tier:hover, .ct-card:hover,
   .logo:hover i, .sys:hover .sys__thumb img,
   .sys:hover .sys__ico, .ct-card:hover .ct-card__ico,
-  .ct-card:hover .ct-card__arr {
+  .ct-card:hover .ct-card__arr,
+  .game:hover, .game:hover .game__thumb img, .game:hover .game__icon,
+  .game:hover .game__link i {
     transform: none;
   }
   .btn--main:hover { box-shadow: var(--shadow-glow) }
-  .sys:hover, .tier:hover, .ct-card:hover { box-shadow: var(--shadow) }
+  .sys:hover, .tier:hover, .ct-card:hover, .game:hover { box-shadow: var(--shadow) }
+  .game:hover .game__link, .game:nth-child(2):hover .game__link { background: var(--tx) }
   .sys:hover .sys__play, .sys:hover::before { opacity: inherit }
   .btn--main:hover::before { left: -120% }
 }
@@ -846,6 +944,7 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
   <a href="#" class="logo"><i>M</i> miky</a>
   <nav>
     <ul id="nav">
+      <li><a href="#games">Games</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#scope">Scope</a></li>
       <li><a href="#systems">Systems</a></li>
@@ -866,6 +965,50 @@ button.ct-card.copied .ct-card__arr { color: var(--sage) }
     <div class="hero__btns">
       <a href="#contact" class="btn btn--main"><span><i class="fa-solid fa-paper-plane"></i> Commission Me</span></a>
       <a href="#work" class="btn btn--sec">View My Work <i class="fa-solid fa-arrow-down"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- GAMES -->
+<section class="sect" id="games">
+  <div class="w">
+    <h2 class="sect-h rv">Games I've Worked On</h2>
+    <p class="games-head rv">Live on Roblox with <strong>4.9M+ visits</strong> combined</p>
+    <div class="games-grid stag">
+      <a href="https://www.roblox.com/games/82400187661950/Carry-a-Bunny" target="_blank" rel="noopener noreferrer" class="game rv">
+        <div class="game__thumb">
+          <img src="assets/games/carry-a-bunny.webp" alt="Carry A Bunny game thumbnail" width="768" height="432" loading="lazy">
+          <span class="game__visits"><i class="fa-solid fa-play"></i><b>4.4M+</b> visits</span>
+        </div>
+        <div class="game__body">
+          <div class="game__top">
+            <img class="game__icon" src="assets/games/carry-a-bunny-icon.webp" alt="" width="72" height="72" loading="lazy">
+            <div>
+              <h3 class="game__name">Carry A Bunny</h3>
+              <span class="game__role">Primary Scripter</span>
+            </div>
+          </div>
+          <p class="game__desc">Built and integrated the majority of the game's scripting, including the 2-player Human/Bunny system, carrying, course progression, checkpoints, obstacles, saving, cosmetics, rewards, monetization, teleporting, and UI-connected gameplay systems. I also maintained and expanded existing systems as the game received new maps and updates.</p>
+          <span class="game__link">Play on Roblox <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+      </a>
+      <a href="https://www.roblox.com/games/97223477435566/Pass-The-Squishy" target="_blank" rel="noopener noreferrer" class="game rv">
+        <div class="game__thumb">
+          <img src="assets/games/pass-the-squishy.webp" alt="Pass The Squishy game thumbnail" width="767" height="432" loading="lazy">
+          <span class="game__visits"><i class="fa-solid fa-play"></i><b>527K+</b> visits</span>
+        </div>
+        <div class="game__body">
+          <div class="game__top">
+            <img class="game__icon" src="assets/games/pass-the-squishy-icon.webp" alt="" width="72" height="72" loading="lazy">
+            <div>
+              <h3 class="game__name">Pass The Squishy</h3>
+              <span class="game__role">Lead Scripter / Gameplay Developer</span>
+            </div>
+          </div>
+          <p class="game__desc">Built the game's core scripting architecture and nearly all major gameplay systems from scratch, including round management, squishy passing, eliminations, final-duel combat, bots, maps, voting, cosmetics, currency, saving, leaderboards, monetization, rewards, console/mobile support, and UI-connected systems. I also handled extensive gameplay polish, optimization, testing, and post-launch updates.</p>
+          <span class="game__link">Play on Roblox <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -1359,11 +1502,13 @@ nv.querySelectorAll('a').forEach(a => a.onclick = () => {
 document.querySelectorAll('a[href="#work"]').forEach(a => {
   a.addEventListener('click', (e) => {
     e.preventDefault();
-    const s = document.getElementById('systems');
+    const s = document.getElementById('games');
     if (!s) return;
     const rect = s.getBoundingClientRect();
     const sectionTop = rect.top + window.scrollY;
-    const target = Math.max(0, sectionTop + rect.height / 2 - window.innerHeight / 2);
+    // center the section, but if it's taller than the screen line its top up under the header
+    const centered = sectionTop + rect.height / 2 - window.innerHeight / 2;
+    const target = Math.max(0, Math.min(centered, sectionTop - 84));
     window.scrollTo({ top: target, behavior: 'smooth' });
   });
 });
